@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Silka';
+    src: local('Silka'),
+        url('./fonts/Silka/silka-regular-webfont.woff') format('woff'),
+        url('./fonts/Silka/silka-regular-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'C4';
+    src: local('C4'),
+         url('./fonts/C4v4/C4v4-Regular.woff') format('woff'),
+         url('./fonts/C4v4/C4v4-Regular.woff2') format('woff2');
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 80vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-anchor: none;;
+}
+
+h1, h2, h3 {
+    font-family: 'C4', cursive;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: min(7vw, 6rem);
+}
+
+h3 {
+    font-size: min(6vw, 2.2rem);
+}
+
+p {
+    font-family: 'Silka', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Silka';
+}
+

@@ -1,0 +1,138 @@
+.contact {
+    @include section;
+    position: relative;
+    margin-bottom: 0!important;
+    
+    &-container {
+        overflow: hidden;
+    }
+
+    &-decoration {
+        position: absolute;
+        width: 100vw;
+        top: 5%;
+        right: -60%;
+        z-index: -1;
+        display: none;
+
+        @include responsive(small) {
+            display: block;
+        }
+    }
+
+    &-title {
+        text-align: center;
+    }
+
+    &-form {
+
+        &_grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 1fr 1fr 2fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 80rem;
+            margin: 2rem auto 1rem auto;
+
+        }
+
+        &_item {
+
+            @include flexbox(column, flex-start, flex-start);
+
+            label {
+                font-family: 'Silka', sans-serif;
+                font-size: 1.6rem;
+                margin: 1rem 0;
+            }
+
+            input {
+                border: 1px solid black;
+                border-radius: 1rem;
+                width: 100%;
+                height: 5rem;
+                font-family: 'Silka', sans-serif;
+                background-color: white;
+                padding: 0 2rem;
+
+                &:focus {
+                    border: inset 2px solid $primary;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 10rem;
+                resize: none;
+                border: 1px solid black;
+                border-radius: 1rem;
+                font-family: 'Silka', sans-serif;
+                padding: 1rem 2rem;
+            }
+
+            &_error {
+                color: red;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+            }
+
+            &:nth-child(5) {
+                grid-column: 1/3;
+                grid-row: 3/3;
+            }
+        }
+
+        &_btn, &_success {
+            border-radius: 1rem;
+            width: 50%;
+            max-width: 30rem;
+            height: 5rem;
+            @include flexbox(row, center, center);
+        }
+
+        &_btn {
+
+            border: 1px solid transparent;
+            font-family: 'Silka', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin: 0 auto;
+            justify-self: center;
+            background-color: $primary;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+            img {
+                width: 2rem;
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 5px 2px rgba($color: $primary, $alpha: 0.5);
+                border: 1px solid white;
+            }
+
+            &:active {
+                transform: scale(1);
+                box-shadow: none;
+            }
+        }
+
+        &_success, &_error {
+            margin: 0.5rem auto;
+            text-transform: uppercase;
+        }
+
+        &_success {
+            color: white;
+            background-color: green;
+        }
+
+        &_error {
+            color:  red;
+            width: fit-content;
+        }
+    }
+}

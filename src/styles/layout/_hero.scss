@@ -1,0 +1,183 @@
+.hero {
+
+    overflow: hidden;
+    @include section;
+    
+    @include responsive(medium) {
+        padding-top: 15rem;
+    }
+
+    &-container {
+        @include flexbox(column-reverse, flex-start, center);
+
+
+        @include responsive(medium) {
+            @include flexbox(row, space-between, center);
+        }
+
+    }
+
+  
+
+    &-content {
+
+        margin: 2rem 0;
+
+        @include responsive (medium) {
+            width: 78%;
+            max-width: 70rem;
+            @include flexbox(column, flex-start, flex-start);
+        }
+
+
+        &_title {         
+            
+            @include flexbox(column, flex-start, flex-end);
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 0.2rem;
+            max-width: 70rem;
+
+            @include responsive(medium) {
+                margin: 0;
+                max-width: 70rem;
+            }
+
+
+                h1 {
+                    font-size: min(8vw, 7.2rem);
+
+                }
+          
+
+            &_subtitle {
+                @include flexbox(row, flex-end, center);
+                width: 100%;
+
+                p {
+                    @include flexbox(row, center, center);
+                    width: 55%;
+                    font-size: min(3vw, 2.3rem);
+                    border: 1px solid black;
+                    border-radius: 5rem;
+                    background-color: $primary;
+                    padding: 1rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &_text {
+            margin: 3rem 0;
+            position: relative;
+            font-size: min(4.1vw, 2.4rem);
+
+            &_word {
+                overflow: hidden;
+                display: inline-block;
+                padding: 0 0.2rem;
+
+
+                span {
+                    display: inline-block;
+                }
+            }
+
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                max-width: 50rem;
+
+            }
+        }
+    }
+
+    &-img {
+        position: relative;
+        @include flexbox(row, center, center);
+        max-width: 40rem;
+        overflow: hidden;
+
+        &_container {
+            width: 100%;
+            height: 100%;
+            @include flexbox(row, center, center);
+
+            @include responsive(medium) {
+                animation-delay: 0.6s;
+            }
+        }
+
+        @include responsive(medium) {
+            width: 40%;
+        }
+
+        &_illu {
+            width: 80%;
+            z-index: 1;
+        }
+
+        &_price, &_stars {
+            position: absolute;
+        }
+
+        &_price {
+            left: 10%;
+            bottom: 5%;
+            animation: rotate 3s  linear infinite;
+        }
+
+        &_stars {
+            width: 20%;
+            height: 10rem;
+            top: 5%;
+            right: 5%;
+            z-index: 2;
+
+            img {
+                position: absolute;
+                height: fit-content;
+                animation: zoomout 2s ease-in-out backwards infinite;
+
+                &:nth-child(1) {
+                    left: 0;
+                    top: 20%;
+                    width: 70%;
+                }
+
+                &:nth-child(2) {
+                    top: 0;
+                    left: 50%;
+                    width: 40%;
+                    animation-delay: 0.3s;
+                }
+
+                &:nth-child(3) {
+                    top: 60%;
+                    left: 60%;
+                    width: 35%;
+                    animation-delay: 0.6s;
+                }
+            }
+        }
+    }
+
+    &-links {
+        width: 70%;
+        max-width: 22.5rem;
+        @include flexbox(row, space-between, center);
+        margin: 1rem auto;
+        overflow: hidden;
+        padding: 1rem;
+
+
+        @include responsive(medium) {
+            margin: 0;
+        }
+
+    }
+}

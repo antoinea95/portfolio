@@ -1,0 +1,32 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+};
+
+@keyframes zoomout {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes translateTop {
+
+    0% {
+        transform: translateY(50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

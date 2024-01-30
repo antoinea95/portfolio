@@ -1,0 +1,30 @@
+.footer {
+    width: 80vw;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    margin-top: 5rem;
+    @include flexbox(column, space-between, center);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    
+    @include responsive(medium) {
+        @include flexbox(row, space-between, center);
+
+    }
+
+    &-credits {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &-links {
+        @include flexbox(row, space-between, center);
+        width: 70%;
+        max-width: 23rem;
+        margin-top: 1rem;
+    }
+}
