@@ -14,18 +14,14 @@
 
 html {
     font-size: 10px;
+    height: auto;
+    overflow-x: hidden;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    overflow-x: hidden;
-}
-
-#root {
-    width: 100%;
-    overflow-x: hidden;
 }
 
 h1, h2, h3 {

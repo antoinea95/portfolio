@@ -10,14 +10,22 @@
     &-decoration {
         position: absolute;
         width: 100vw;
-        top: 5%;
-        right: -60%;
+        overflow: hidden;
+        top: 15%;
+        left: -5%;
         z-index: -1;
         display: none;
 
         @include responsive(small) {
             display: block;
         }
+
+        #svg {
+            width: 110vw;
+            margin-left: 30vw;
+        }
+
+
     }
 
     &-title {

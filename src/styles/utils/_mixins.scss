@@ -38,10 +38,14 @@ $breakpoints: (
   width: 85%;
   margin: 5rem auto;
   padding-top: 7rem;
-  min-height: 80vh;
-  
+  height: auto;
+  overflow: hidden;
+
+  @include responsive(small) {
+    overflow: visible;
+  }
+
   @include responsive(medium) {
-    min-height: 100vh;
     padding-top: 10rem;
   }
 }

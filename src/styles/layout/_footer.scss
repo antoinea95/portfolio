@@ -4,9 +4,6 @@
     overflow: hidden;
     margin-top: 5rem;
     @include flexbox(column, space-between, center);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 
 
     

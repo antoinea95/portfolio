@@ -79,18 +79,14 @@ td, th {
 }
 html {
   font-size: 10px;
+  height: auto;
+  overflow-x: hidden;
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  overflow-x: hidden;
-}
-
-#root {
-  width: 100%;
-  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -209,11 +205,16 @@ a {
   width: 85%;
   margin: 5rem auto;
   padding-top: 7rem;
-  min-height: 80vh;
+  height: auto;
+  overflow: hidden;
+}
+@media (min-width: 767px) {
+  .hero {
+    overflow: visible;
+  }
 }
 @media (min-width: 1160px) {
   .hero {
-    min-height: 100vh;
     padding-top: 10rem;
   }
 }
@@ -398,18 +399,24 @@ a {
   width: 85%;
   margin: 5rem auto;
   padding-top: 7rem;
-  min-height: 80vh;
+  height: auto;
+  overflow: hidden;
   position: relative;
+}
+@media (min-width: 767px) {
+  .work {
+    overflow: visible;
+  }
 }
 @media (min-width: 1160px) {
   .work {
-    min-height: 100vh;
     padding-top: 10rem;
   }
 }
 .work-decoration {
   position: absolute;
-  width: 110vw;
+  width: 100vw;
+  overflow: hidden;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -420,6 +427,9 @@ a {
   .work-decoration {
     display: block;
   }
+}
+.work-decoration #svg {
+  width: 110vw;
 }
 .work-container {
   display: grid;
@@ -504,11 +514,16 @@ a {
   width: 85%;
   margin: 5rem auto;
   padding-top: 7rem;
-  min-height: 80vh;
+  height: auto;
+  overflow: hidden;
+}
+@media (min-width: 767px) {
+  .about {
+    overflow: visible;
+  }
 }
 @media (min-width: 1160px) {
   .about {
-    min-height: 100vh;
     padding-top: 10rem;
   }
 }
@@ -539,6 +554,9 @@ a {
   .about-decoration {
     display: block;
   }
+}
+.about-decoration svg {
+  color: red;
 }
 .about-title {
   text-align: right;
@@ -599,13 +617,18 @@ a {
   width: 85%;
   margin: 5rem auto;
   padding-top: 7rem;
-  min-height: 80vh;
+  height: auto;
+  overflow: hidden;
   position: relative;
   margin-bottom: 0 !important;
 }
+@media (min-width: 767px) {
+  .contact {
+    overflow: visible;
+  }
+}
 @media (min-width: 1160px) {
   .contact {
-    min-height: 100vh;
     padding-top: 10rem;
   }
 }
@@ -615,8 +638,9 @@ a {
 .contact-decoration {
   position: absolute;
   width: 100vw;
-  top: 5%;
-  right: -60%;
+  overflow: hidden;
+  top: 15%;
+  left: -5%;
   z-index: -1;
   display: none;
 }
@@ -624,6 +648,10 @@ a {
   .contact-decoration {
     display: block;
   }
+}
+.contact-decoration #svg {
+  width: 110vw;
+  margin-left: 30vw;
 }
 .contact-title {
   text-align: center;
@@ -734,9 +762,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 @media (min-width: 1160px) {
   .footer {

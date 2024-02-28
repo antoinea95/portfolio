@@ -28,6 +28,10 @@
         @include responsive(small) {
             display: block;
         }
+
+        svg {
+            color: red;
+        }
     }
 
     &-title {
