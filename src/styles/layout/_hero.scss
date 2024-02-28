@@ -40,12 +40,12 @@
 
             @include responsive(medium) {
                 margin: 0;
-                max-width: 70rem;
             }
 
 
                 h1 {
-                    font-size: min(8vw, 7.2rem);
+                    font-size: min(8vw, 7rem);
+                    white-space: nowrap;
 
                 }
           
@@ -99,7 +99,7 @@
     &-img {
         position: relative;
         @include flexbox(row, center, center);
-        max-width: 40rem;
+        max-width: 50rem;
         overflow: hidden;
 
         &_container {
@@ -113,11 +113,12 @@
         }
 
         @include responsive(medium) {
-            width: 40%;
+            width: 50%;
         }
 
         &_illu {
-            width: 80%;
+            width: 100%;
+            max-width: 35rem;
             z-index: 1;
         }
 
@@ -172,7 +173,6 @@
         @include flexbox(row, space-between, center);
         margin: 1rem auto;
         overflow: hidden;
-        padding: 1rem;
 
 
         @include responsive(medium) {

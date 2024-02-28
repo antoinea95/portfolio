@@ -41,6 +41,7 @@
         
         &_container {
             width: 95%;
+            height: 100%;
             @include flexbox(column, space-between, flex-start);
         }
 
@@ -79,9 +80,14 @@
 
         &_skills {
             @include flexbox(row, center, center);
-            position: absolute;
-            right: 2%;
-            top: 0;           
+            align-self: flex-end;
+
+            @include responsive(medium) {
+                position: absolute;
+                right: 2%;
+                top: 0;   
+            }
+             
         }
         
     }

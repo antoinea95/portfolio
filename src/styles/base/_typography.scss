@@ -17,11 +17,15 @@ html {
 }
 
 body {
-    width: 80vw;
-    max-width: 1300px;
+    width: 100vw;
+    max-width: 1440px;
     margin: 0 auto;
     overflow-x: hidden;
-    overflow-anchor: none;;
+}
+
+#root {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
