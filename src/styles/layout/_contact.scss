@@ -2,17 +2,19 @@
     @include section;
     position: relative;
     margin-bottom: 0!important;
-    
+
     &-container {
-        overflow: hidden;
+        width: 85%;
+        margin: 0 auto;
     }
+ 
 
     &-decoration {
         position: absolute;
         width: 100vw;
         overflow: hidden;
         top: 15%;
-        left: -5%;
+        left: 0;
         z-index: -1;
         display: none;
 

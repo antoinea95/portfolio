@@ -80,7 +80,6 @@ td, th {
 html {
   font-size: 10px;
   height: auto;
-  overflow-x: hidden;
 }
 
 body {
@@ -202,16 +201,11 @@ a {
 
 .hero {
   overflow: hidden;
-  width: 85%;
+  width: 100vw;
   margin: 5rem auto;
   padding-top: 7rem;
   height: auto;
   overflow: hidden;
-}
-@media (min-width: 767px) {
-  .hero {
-    overflow: visible;
-  }
 }
 @media (min-width: 1160px) {
   .hero {
@@ -228,6 +222,8 @@ a {
   flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
+  width: 85%;
+  margin: 0 auto;
 }
 @media (min-width: 1160px) {
   .hero-container {
@@ -396,17 +392,12 @@ a {
 }
 
 .work {
-  width: 85%;
+  width: 100vw;
   margin: 5rem auto;
   padding-top: 7rem;
   height: auto;
   overflow: hidden;
   position: relative;
-}
-@media (min-width: 767px) {
-  .work {
-    overflow: visible;
-  }
 }
 @media (min-width: 1160px) {
   .work {
@@ -431,7 +422,12 @@ a {
 .work-decoration #svg {
   width: 110vw;
 }
+.work-title {
+  margin: 0 auto;
+  width: 85%;
+}
 .work-container {
+  width: 85%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
@@ -511,16 +507,11 @@ a {
 }
 
 .about {
-  width: 85%;
+  width: 100vw;
   margin: 5rem auto;
   padding-top: 7rem;
   height: auto;
   overflow: hidden;
-}
-@media (min-width: 767px) {
-  .about {
-    overflow: visible;
-  }
 }
 @media (min-width: 1160px) {
   .about {
@@ -532,6 +523,8 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 85%;
+  margin: 0 auto;
 }
 @media (min-width: 767px) {
   .about-container {
@@ -544,7 +537,7 @@ a {
 .about-decoration {
   position: absolute;
   left: 45%;
-  top: 50%;
+  top: 25%;
   transform: translateX(-50%);
   width: 100vw;
   z-index: -1;
@@ -561,6 +554,8 @@ a {
 .about-title {
   text-align: right;
   padding-right: 2rem;
+  width: 85%;
+  margin: 0 auto;
 }
 .about-content {
   grid-column: 1/1;
@@ -614,7 +609,7 @@ a {
 }
 
 .contact {
-  width: 85%;
+  width: 100vw;
   margin: 5rem auto;
   padding-top: 7rem;
   height: auto;
@@ -622,25 +617,21 @@ a {
   position: relative;
   margin-bottom: 0 !important;
 }
-@media (min-width: 767px) {
-  .contact {
-    overflow: visible;
-  }
-}
 @media (min-width: 1160px) {
   .contact {
     padding-top: 10rem;
   }
 }
 .contact-container {
-  overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
 }
 .contact-decoration {
   position: absolute;
   width: 100vw;
   overflow: hidden;
   top: 15%;
-  left: -5%;
+  left: 0;
   z-index: -1;
   display: none;
 }
@@ -754,10 +745,10 @@ a {
 }
 
 .footer {
-  width: 85vw;
+  width: 85%;
   padding: 1rem 2rem;
   overflow: hidden;
-  margin-top: 5rem;
+  margin: 2rem auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

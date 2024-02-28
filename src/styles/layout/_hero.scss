@@ -9,6 +9,8 @@
 
     &-container {
         @include flexbox(column-reverse, flex-start, center);
+        width: 85%;
+        margin: 0 auto;
 
 
         @include responsive(medium) {
