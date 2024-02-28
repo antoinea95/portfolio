@@ -44,6 +44,11 @@ export const WorkCard = ({
           <h3>{item.name}</h3>
           {item.site && <RoundLink item={item.site} animation={animation} variants={LinkVariants} />}
         </div>
+        <div className="work-card_skills">
+          {item.technos.map((skill) => (
+            <RoundIcon item={skill} key={skill.name} />
+          ))}
+        </div>
         <div className="work-card_content">{item.content()}</div>
         {item.pictures && (
           <div className="work-card_img">
@@ -57,11 +62,6 @@ export const WorkCard = ({
             ))}
           </div>
         )}
-        <div className="work-card_skills">
-          {item.technos.map((skill) => (
-            <RoundIcon item={skill} key={skill.name} />
-          ))}
-        </div>
       </motion.div>
     </motion.section>
   );

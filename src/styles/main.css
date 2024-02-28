@@ -141,7 +141,11 @@ a {
 }
 .round-icon {
   width: 3rem;
-  margin: 1rem 1rem 0 0;
+  margin-top: 1.8rem;
+  margin-right: 1rem;
+}
+.round-icon:last-child {
+  margin-right: 0;
 }
 
 .header {
@@ -416,7 +420,7 @@ a {
 .work-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   margin: 2rem auto;
   gap: 2rem;
 }
@@ -436,7 +440,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .work-card_container {
   width: 95%;
@@ -444,12 +448,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-}
-@media (min-width: 767px) {
-  .work-card:nth-child(2) {
-    grid-row: 1/3;
-    grid-column: 1/1;
-  }
 }
 .work-card_header {
   display: flex;
@@ -468,7 +466,7 @@ a {
   margin: 2rem 0;
 }
 .work-card_content p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .work-card_img {
   display: flex;
@@ -479,15 +477,17 @@ a {
 }
 .work-card_img img {
   object-fit: cover;
-  width: 45%;
+  width: 80%;
   border-radius: 1rem;
 }
 .work-card_skills {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  align-self: flex-end;
+  position: absolute;
+  right: 2%;
+  top: 0;
 }
 
 .about {
