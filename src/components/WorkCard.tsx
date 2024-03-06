@@ -23,7 +23,7 @@ export const WorkCard = ({
 
   const LinkVariants = {
     hidden: {opacity: 0},
-    visible: {opacity: 1}
+    visible: {opacity: 1, transition: {duration: 1, delay: 2, ease: "easeOut"}}
   }
 
 
@@ -57,11 +57,16 @@ export const WorkCard = ({
             ))}
           </div>
         )}
-         <div className="work-card_skills">
+         <motion.div 
+         className="work-card_skills"
+         variants={LinkVariants}
+        initial="hidden"
+        animate={animation}
+         >
           {item.technos.map((skill) => (
             <RoundIcon item={skill} key={skill.name} />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </motion.section>
   );

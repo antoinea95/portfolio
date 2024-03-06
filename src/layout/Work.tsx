@@ -7,7 +7,7 @@ import { useMotion } from "../utils/useMotion"
 
 export const Work = () => {
 
-    const ref = useRef<HTMLElement>(null)
+    const ref = useRef<HTMLDivElement>(null)
     const animation = useMotion(ref);
 
     const titleVariants = {
@@ -19,9 +19,9 @@ export const Work = () => {
     return (
         <article 
         className="work" 
-        id="work" 
-        ref={ref}
+        id="work"
         >
+            <div className="work-ref" ref={ref}>
             <motion.div 
             className="work-title"
             variants={titleVariants}
@@ -35,6 +35,7 @@ export const Work = () => {
             </div>
             <div className="work-decoration">
             <Trait animation={animation}/>
+            </div>
             </div>
         </article>
     )
