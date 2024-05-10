@@ -80,11 +80,10 @@ td, th {
 html {
   font-size: 10px;
   height: auto;
+  overflow-x: hidden;
 }
 
 body {
-  width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -201,11 +200,11 @@ a {
 
 .hero {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   margin: 5rem auto;
   padding-top: 7rem;
+  min-height: 100vh;
   height: auto;
-  overflow: hidden;
 }
 @media (min-width: 1160px) {
   .hero {
@@ -392,11 +391,11 @@ a {
 }
 
 .work {
-  width: 100vw;
+  width: 100%;
   margin: 5rem auto;
   padding-top: 7rem;
+  min-height: 100vh;
   height: auto;
-  overflow: hidden;
   position: relative;
 }
 @media (min-width: 1160px) {
@@ -507,11 +506,11 @@ a {
 }
 
 .about {
-  width: 100vw;
+  width: 100%;
   margin: 5rem auto;
   padding-top: 7rem;
+  min-height: 100vh;
   height: auto;
-  overflow: hidden;
 }
 @media (min-width: 1160px) {
   .about {
@@ -609,11 +608,11 @@ a {
 }
 
 .contact {
-  width: 100vw;
+  width: 100%;
   margin: 5rem auto;
   padding-top: 7rem;
+  min-height: 100vh;
   height: auto;
-  overflow: hidden;
   position: relative;
   margin-bottom: 0 !important;
 }
